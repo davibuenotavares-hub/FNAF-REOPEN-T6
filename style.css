@@ -1,0 +1,37 @@
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; user-select: none; }
+body { margin: 0; background: #000; color: white; font-family: 'Courier New', monospace; overflow: hidden; }
+#game-screen { width: 100vw; height: 100vh; position: relative; display: flex; flex-direction: column; }
+#ui-top { display: flex; justify-content: space-between; padding: 10px; background: #000; font-size: 0.8rem; border-bottom: 1px solid #333; }
+
+#office { flex: 1; position: relative; background: #111; display: flex; align-items: center; justify-content: center; }
+
+/* Janela Central Esticada */
+.window-style { width: 60%; height: 25%; border: 4px solid #444; position: absolute; top: 15%; cursor: pointer; }
+
+/* Porta na Direita */
+.door-style { width: 22%; height: 85%; border: 4px solid #444; position: absolute; right: 2%; cursor: pointer; }
+
+.aperture { display: flex; align-items: center; justify-content: center; background: #050505; transition: 0.2s; font-size: 0.7rem; color: #333; }
+.closed { background: #500 !important; border-color: red !important; color: white !important; }
+
+/* Controles de Temperatura no Centro */
+#temp-controls { position: absolute; top: 45%; display: flex; gap: 40px; z-index: 10; }
+#temp-controls button { font-size: 2.5rem; background: rgba(0,0,0,0.8); border: 2px solid #444; color: white; padding: 10px; border-radius: 5px; }
+
+#camera-monitor { position: absolute; inset: 0; background: #000; display: none; flex-direction: column; z-index: 200; }
+#cam-view { flex: 1; position: relative; border: 5px solid #222; display: flex; justify-content: center; align-items: center; }
+
+/* Botões no Centro da Câmera */
+#btn-audio-center, #btn-recharge { 
+    font-size: 4rem; background: rgba(0,255,0,0.1); border: 3px solid #0f0; 
+    color: #0f0; padding: 30px; border-radius: 50%; display: none; cursor: pointer;
+}
+
+#cam-controls { padding: 10px; background: #111; }
+#cam-buttons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; margin-bottom: 5px; }
+.cam-btn { padding: 15px; background: #222; color: #0f0; border: 1px solid #0f0; font-weight: bold; }
+
+#office-controls { display: flex; height: 80px; }
+#office-controls button { flex: 1; background: #222; color: white; border: 1px solid #444; font-size: 0.7rem; font-weight: bold; }
+
+#office-status { position: absolute; bottom: 90px; color: white; text-align: center; width: 100%; font-size: 0.9rem; }
